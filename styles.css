@@ -8,17 +8,19 @@ body{
   background-color: rgb(240, 230, 236);
 }
 header{
-  background-color: white;
+  display: flex;
+  justify-content: center;
 }
 main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   text-align: center;
+  width: 100%;
 }
 .logo {
-  width: 2vw;
-  margin: 1rem;
+  width: 6vw;
+  margin: 0.5rem;
 }
 .tree {
   width: 100%;
