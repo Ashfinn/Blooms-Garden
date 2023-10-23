@@ -1,27 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
 * {
   margin: 0;
   padding: 0;
-  font-size: 16px;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 body{ 
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
   background-color: rgb(240, 230, 236);
 }
-header{
-  display: flex;
-  justify-content: center;
+.logo {
+  width: 3.5rem;
+  padding: 1rem 0 0.5rem 1rem;
+  margin: 0;
+}
+.logo-container {
+  background-color: white;
 }
 main {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  text-align: center;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+}
+main article h1, main article p {
+  margin: 1rem;
+}
+main article img {
   width: 100%;
 }
-.logo {
-  width: 6vw;
-  margin: 0.5rem;
-}
-.tree {
-  width: 100%;
+main article h1 {
+  font-size: 2rem;
+  width: 80%;
 }
