@@ -6,10 +6,10 @@
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
-body{ 
-  font-family: 'Josefin Sans', sans-serif;
+body {
+  font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
-  background-color: #0C1E34;
+  background-color: #0c1e34;
   color: white;
 }
 .logo {
@@ -25,16 +25,19 @@ body{
   flex-direction: column-reverse;
   justify-content: center;
 }
-#page1 article h1, main article p {
+#page1 article h1,
+main article p {
   margin: 2rem 1rem;
 }
 #page1 article img {
   width: 100%;
 }
+#page1 article .desktop {
+}
 #page1 article h1 {
   font-size: 2rem;
   width: 80%;
-  background-color: #0C1E34;
+  background-color: #0c1e34;
   padding: 0.5rem;
   color: white;
 }
@@ -56,10 +59,75 @@ body{
   display: flex;
   flex-wrap: wrap;
 }
+#page2 article {
+  border: 1px solid white;
+  padding: 1rem;
+  line-height: 1.5rem;
+}
 #page2 article h1 {
   margin: 1rem;
   font-size: 2rem;
 }
 #page2 article img {
   width: 100%;
+}
+
+#page3 article section {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#page3 article h1 {
+  margin: 0 0 1rem 0;
+  padding: 1rem;
+  background-color: white;
+  color: black;
+}
+
+#page3 article section img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  
+  main #page1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  main #page1 article .mobile {
+    display: none;
+  }
+  main #page1 article {
+    margin: 0;
+  }
+  main #page1 article h1,
+  main #page1 article p {
+    padding: 0 1rem;
+  }
+
+  main #page2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+  }
+  main #page2 article {
+    width: 50%;
+    margin: 5rem 0;
+  }
+  main #page3 article {
+    margin: 5rem 0;
+  }
+  main #page3 article section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid white;
+    margin: 1rem;
+  }
+  main #page3 article section img {
+    padding: 1rem;
+  }
 }
