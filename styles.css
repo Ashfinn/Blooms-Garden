@@ -118,10 +118,13 @@ main article p {
   background-color: white;
   color: black;
 }
-#page4 h1 {
+#page4 article {
+  display: flex;
+  justify-content: space-between;
   margin: 1rem;
   padding: 1rem;
 }
+
 #page4 section {
   display: flex;
   flex-direction: row;
