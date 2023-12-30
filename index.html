@@ -1,102 +1,109 @@
 <!DOCTYPE html>
 <html lang="en" lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Lucky Shrub Website</title>
-    <link rel="icon" href="img/Asset 3@3x.png" type="image/png" sizes="32x32" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
 
-  <body>
-    <header class="logo-container">
-      <img class="logo" src="img/Asset 1@3x.png" alt="logo" />
-      <a href="https://ashfinn.github.io/Lucky-Shrub-Website/"></a>
-      <nav>
-        <a href="https://ashfinn.github.io/Lucky-Shrub-Website/">Home</a>
-        <a href="#page2">About</a>
-        <a href="#page3">Gallery</a>
-        <a href="#page4">Contact</a>
-      </nav>
-    </header>
-    <main>
-      <div id="page1">
-        <article>
-          <h1>Welcome to <span>Lucky Shrub</span></h1>
-          <p>
-            At Lucky Shrub, we're passionate about turning your outdoor space
-            into a green oasis.
-          </p>
-          <div class="buttons">
-            <a href="#page2" class="button">About</a>
-            <a href="#page3" class="button">Gallery</a>
-          </div>
-        </article>
+<head>
+  <meta charset="UTF-8" />
+  <title>Lucky Shrub</title>
+  <link rel="icon" href="img/Asset 3@3x.png" type="image/png" sizes="32x32" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/11a2fb163c.js" crossorigin="anonymous"></script>
 
-        <article>
-          <picture>
-            <img class="desktop" src="img/JM.png" alt="" />
-            <!--<img class="mobile" src="/img/JM mobile.png" alt="" />  
-          -->
-          </picture>
-        </article>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+
+    <div class="container">
+
+      <a class="text-decoration-none fs-3" href="https://ashfinn.github.io/Lucky-Shrub-Website/"
+        style=" color: #1edd57;">Lucky Shrub</a>
+
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="https://twitter.com/Ashfinnnn" class="twitter"><i
+              class="fab fa-twitter"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="https://github.com/Ashfinn" class="github"><i
+              class="fab fa-github"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/obidur-rahman-shawal/"><i
+              class="fab fa-linkedin"></i></a></li>
+      </ul>
+
+    </div>
+
+  </nav>
+
+  <article class="container py-5">
+    <div class="row">
+      <div class="col-md-6">
+
+        <h1>Welcome to <span>Lucky Shrub</span></h1>
+        <p>
+          At Lucky Shrub, we're passionate about turning your outdoor space into a green oasis.
+        </p>
+
+        <div class="buttons">
+          <a href="#page2" class="btn btn-primary">About</a>
+          <a href="#page3" class="btn btn-secondary">Gallery</a>
+        </div>
       </div>
 
-      <section class="banner">
-        <img src="img/promo-banner.png" alt="" />
-      </section>
-
-      <div id="page2">
-        <article>
-          <h1>About Us</h1>
-          <p>
-            Based in beautiful Tucson, Arizona, our small but dedicated team
-            specializes in garden design, maintenance, and plant sales. We
-            believe that a well-designed garden can bring beauty and tranquility
-            to your life, and we're here to make that a reality. Whether you're
-            looking for a stunning garden makeover, need regular maintenance, or
-            want to bring the outdoors in with our handpicked selection of
-            plants, Lucky Shrub has you covered. Our founder, Jason, is a garden
-            design maestro, and Maria takes care of our thriving plant nursery.
-            Together, they've cultivated a business rooted in their love for
-            plants and a desire to make your outdoor space flourish. We invite
-            you to explore our services and browse our nursery, and we look
-            forward to being your partner in creating the garden of your dreams.
-          </p>
-        </article>
-        <article>
-          <img src="img/about.jpg" alt="" />
-        </article>
+      <div class="col-md-6">
+        <img src="img/intro.jpg" alt="instro" class="img-fluid" />
       </div>
+    </div>
+  </article>
 
-      <div id="page3">
+
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-6">
+
+        <h1>About Us</h1>
+        <p>
+          Based in beautiful Tucson, Arizona, our small but dedicated team specializes in garden design,
+          maintenance, and plant sales. We believe that a well-designed garden can bring beauty and tranquility to
+          your life, and we're here to make that a reality. Whether you're looking for a stunning garden makeover,
+          need regular maintenance, or want to bring the outdoors in with our handpicked selection of plants,
+          Lucky
+          Shrub has you covered. Our founder, Jason, is a garden design maestro, and Maria takes care of our
+          thriving plant nursery. Together, they've cultivated a business rooted in their love for plants and a
+          desire to make your outdoor space flourish. We invite you to explore our services and browse our
+          nursery,
+          and we look forward to being your partner in creating the garden of your dreams.
+        </p>
+
+      </div>
+      <div class="col-md-6">
+        <img src="img/about.jpg" alt="" class="img-fluid" />
+      </div>
+    </div>
+  </div>
+
+  <div id="page3" class="container py-5">
+    <div class="row">
+      <div class="col-md-12">
         <article>
           <h1>Gallery</h1>
-          <section>
-            <img src="img/tree1.jpg" alt="" />
-            <img src="img/tree2.jpg" alt="" />
-            <img src="img/tree3.jpg" alt="" />
-            <img src="img/tree4.jpg" alt="" />
-          </section>
+          <div class="row">
+            <div class="col-md-3">
+              <img src="img/tree1.jpg" alt="" class="img-fluid" />
+            </div>
+            <div class="col-md-3">
+              <img src="img/tree2.jpg" alt="" class="img-fluid" />
+            </div>
+            <div class="col-md-3">
+              <img src="img/tree3.jpg" alt="" class="img-fluid" />
+            </div>
+            <div class="col-md-3">
+              <img src="img/tree4.jpg" alt="" class="img-fluid" />
+            </div>
+          </div>
         </article>
       </div>
-    </main>
+    </div>
+  </div>
 
-    <footer id="page4">
-      <article><h1>Socials & Links</h1>
-        <p>Copyright @Obidur Rahman;</p>
-        </article>
-      <section>
-        <img src="img/Asset 2@3x.png" alt="">
-        <a href="https://twitter.com/" target="_blank"
-          ><img src="img/X.jpg" alt="twitter-icon"
-        /></a>
-        <a href="https://facebook.com/" target="_blank"
-          ><img src="img/facebook.png" alt="facebook-icon"
-        /></a>
-        <a href="https://instagram.com" target="_blank"
-          ><img src="img/instagram.png" alt="instagran-icon"
-        /></a>
-      </section>
-    </footer>
-  </body>
+</body>
+
 </html>
