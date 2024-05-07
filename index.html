@@ -1,109 +1,326 @@
 <!DOCTYPE html>
-<html lang="en" lang="en">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lucky Shrub</title>
-  <link rel="icon" href="img/Asset 3@3x.png" type="image/png" sizes="32x32" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
   <script src="https://kit.fontawesome.com/11a2fb163c.js" crossorigin="anonymous"></script>
+  <style>
+    .animate-fade-in {
+      opacity: 0;
+      animation: fadeIn 1s ease-in-out forwards;
+    }
 
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    /* Add new styles */
+    .carousel {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .carousel-item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .carousel-item.active {
+      opacity: 1;
+    }
+
+    .carousel-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      z-index: 1;
+    }
+
+    .carousel-nav button {
+      background-color: rgba(255, 255, 255, 0.5);
+      border: none;
+      padding: 10px 20px;
+      font-size: 24px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .carousel-nav button:hover {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .animate-slide-in {
+      animation: slideIn 1s ease-in-out forwards;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100%);
+      }
+
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    .animate-slide-out {
+      animation: slideOut 1s ease-in-out forwards;
+    }
+
+    @keyframes slideOut {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(100%);
+      }
+    }
+  </style>
 </head>
 
-<body>
-  <nav class="navbar navbar-expand navbar-dark bg-dark">
-
-    <div class="container">
-
-      <a class="text-decoration-none fs-3" href="https://ashfinn.github.io/Lucky-Shrub-Website/"
-        style=" color: #1edd57;">Lucky Shrub</a>
-
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="https://twitter.com/Ashfinnnn" class="twitter"><i
-              class="fab fa-twitter"></i></a></li>
-        <li class="nav-item"><a class="nav-link" href="https://github.com/Ashfinn" class="github"><i
-              class="fab fa-github"></i></a></li>
-        <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/obidur-rahman-shawal/"><i
-              class="fab fa-linkedin"></i></a></li>
+<body class="font-sans">
+  <header class="bg-green-900 text-white fixed w-full z-50">
+    <nav class="container mx-auto flex items-center justify-between py-2">
+      <div class="logo animate-slide-in">
+        <a href="#" class="text-2xl font-bold">Lucky Shrub</a>
+      </div>
+      <ul class="hidden md:flex space-x-6 animate-slide-in">
+        <li><a href="#" class="hover:text-green-300">Home</a></li>
+        <li><a href="#about" class="hover:text-green-300">About</a></li>
+        <li><a href="#services" class="hover:text-green-300">Services</a></li>
+        <li><a href="#gallery" class="hover:text-green-300">Gallery</a></li>
+        <li><a href="#contact" class="hover:text-green-300">Contact</a></li>
       </ul>
+      <button class="md:hidden text-green-300 focus:outline-none animate-slide-in">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </header>
 
+  <div class="fixed bottom-4 right-4 z-40 animate-slide-in">
+    <div class="bg-green-800 rounded-full p-2">
+      <a href="https://twitter.com/Ashfinnnn" target="_blank" class="text-white hover:text-green-300"><i
+          class="fab fa-twitter"></i></a>
     </div>
-
-  </nav>
-
-  <article class="container py-5">
-    <div class="row">
-      <div class="col-md-6">
-
-        <h1>Welcome to <span>Lucky Shrub</span></h1>
-        <p>
-          At Lucky Shrub, we're passionate about turning your outdoor space into a green oasis.
-        </p>
-
-        <div class="buttons">
-          <a href="#page2" class="btn btn-primary">About</a>
-          <a href="#page3" class="btn btn-secondary">Gallery</a>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <img src="img/intro.jpg" alt="instro" class="img-fluid" />
-      </div>
+    <div class="bg-green-800 rounded-full p-2 mt-2">
+      <a href="https://github.com/Ashfinn" target="_blank" class="text-white hover:text-green-300"><i
+          class="fab fa-github"></i></a>
     </div>
-  </article>
-
-
-  <div class="container py-5">
-    <div class="row">
-      <div class="col-md-6">
-
-        <h1>About Us</h1>
-        <p>
-          Based in beautiful Tucson, Arizona, our small but dedicated team specializes in garden design,
-          maintenance, and plant sales. We believe that a well-designed garden can bring beauty and tranquility to
-          your life, and we're here to make that a reality. Whether you're looking for a stunning garden makeover,
-          need regular maintenance, or want to bring the outdoors in with our handpicked selection of plants,
-          Lucky
-          Shrub has you covered. Our founder, Jason, is a garden design maestro, and Maria takes care of our
-          thriving plant nursery. Together, they've cultivated a business rooted in their love for plants and a
-          desire to make your outdoor space flourish. We invite you to explore our services and browse our
-          nursery,
-          and we look forward to being your partner in creating the garden of your dreams.
-        </p>
-
-      </div>
-      <div class="col-md-6">
-        <img src="img/about.jpg" alt="" class="img-fluid" />
-      </div>
+    <div class="bg-green-800 rounded-full p-2 mt-2">
+      <a href="https://www.linkedin.com/in/obidur-rahman-shawal/" target="_blank"
+        class="text-white hover:text-green-300"><i class="fab fa-linkedin"></i></a>
     </div>
   </div>
 
-  <div id="page3" class="container py-5">
-    <div class="row">
-      <div class="col-md-12">
-        <article>
-          <h1>Gallery</h1>
-          <div class="row">
-            <div class="col-md-3">
-              <img src="img/tree1.jpg" alt="" class="img-fluid" />
-            </div>
-            <div class="col-md-3">
-              <img src="img/tree2.jpg" alt="" class="img-fluid" />
-            </div>
-            <div class="col-md-3">
-              <img src="img/tree3.jpg" alt="" class="img-fluid" />
-            </div>
-            <div class="col-md-3">
-              <img src="img/tree4.jpg" alt="" class="img-fluid" />
+  <main>
+    <section class="hero bg-green-900 text-white py-32">
+      <div class="hero-content container mx-auto text-center animate-fade-in">
+        <h1 class="text-5xl font-bold mb-4">Welcome to Lucky Shrub</h1>
+        <p class="text-xl mb-8">Turn your outdoor space into a green oasis</p>
+        <a href="#contact"
+          class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md transition-all duration-300">Get
+          Started</a>
+      </div>
+    </section>
+
+    <section class="about py-16" id="about">
+      <div class="container mx-auto">
+        <div class="section-header text-center mb-12 animate-fade-in">
+          <h2 class="text-3xl font-bold mb-2">About Us</h2>
+          <p class="text-lg">Bringing nature's beauty to your doorstep</p>
+        </div>
+        <div class="about-content flex flex-col md:flex-row animate-fade-in">
+          <div class="about-text md:w-1/2 mb-8 md:mb-0">
+            <p class="mb-4">Based in beautiful Tucson, Arizona, our small but dedicated team specializes in garden
+              design, maintenance, and plant sales. We believe that a well-designed garden can bring beauty and
+              tranquility to your life, and we're here to make that a reality.</p>
+            <p class="mb-4">Whether you're looking for a stunning garden makeover, need regular maintenance, or want to
+              bring the outdoors in with our handpicked selection of plants, Lucky Shrub has you covered. Our founder,
+              Jason, is a garden design maestro, and Maria takes care of our thriving plant nursery. Together, they've
+              cultivated a business rooted in their love for plants and a desire to make your outdoor space flourish.
+            </p>
+            <div class="about-founders flex flex-col md:flex-row">
+              <div class="founder md:w-1/2 mb-4 md:mb-0 md:mr-4">
+                <img src="img/ashfin.jpg" alt="Ashfin, Founder" class="rounded-lg shadow-md mb-2 w-full h-auto">
+                <h3 class="text-xl font-bold mb-2 w-full h-auto">
+                  <h3 class="text-xl font-bold mb-1">Ashfin</h3>
+                  <p class="text-sm">Founder, Garden Designer</p>
+              </div>
+              <div class="founder md:w-1/2">
+                <img src="img/madoka.jpg" alt="Madoka, Founder" class="rounded-lg shadow-md mb-2 w-full h-auto">
+                <h3 class="text-xl font-bold mb-1">Madoka</h3>
+                <p class="text-sm">Founder, Plant Nursery Manager</p>
+              </div>
             </div>
           </div>
-        </article>
+          <div class="about-image md:w-1/2">
+            <img src="img/about.jpg" alt="About Lucky Shrub" class="rounded-lg shadow-md w-full h-auto">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services bg-green-100 py-16" id="services">
+      <div class="container mx-auto">
+        <div class="section-header text-center mb-12 animate-fade-in">
+          <h2 class="text-3xl font-bold mb-2">Our Services</h2>
+          <p class="text-lg">Transforming your outdoor spaces</p>
+        </div>
+        <div class="services-grid grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in">
+          <div class="service-card bg-white rounded-lg shadow-md p-6">
+            <i class="fas fa-pencil-ruler text-green-600 text-4xl mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Garden Design</h3>
+            <p>Our skilled designers create custom garden plans tailored to your unique space and vision.</p>
+          </div>
+          <div class="service-card bg-white rounded-lg shadow-md p-6">
+            <i class="fas fa-tools text-green-600 text-4xl mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Garden Maintenance</h3>
+            <p>Let our experienced team handle the upkeep, ensuring your garden remains lush and vibrant.</p>
+          </div>
+          <div class="service-card bg-white rounded-lg shadow-md p-6">
+            <i class="fas fa-seedling text-green-600 text-4xl mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Plant Sales</h3>
+            <p>Explore our nursery and choose from a diverse selection of indoor and outdoor plants for your home or
+              garden.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery py-16" id="gallery">
+      <div class="container mx-auto">
+        <div class="section-header text-center mb-12 animate-fade-in">
+          <h2 class="text-3xl font-bold mb-2">Gallery</h2>
+          <p class="text-lg">Discover our stunning garden designs</p>
+        </div>
+        <div class="carousel">
+          <div class="carousel-item active">
+            <img src="img/gallery1.jpg" alt="Gallery Image 1" class="rounded-lg shadow-md w-full h-full object-cover">
+          </div>
+          <div class="carousel-item">
+            <img src="img/gallery2.jpg" alt="Gallery Image 2" class="rounded-lg shadow-md w-full h-full object-cover">
+          </div>
+          <div class="carousel-item">
+            <img src="img/gallery3.jpg" alt="Gallery Image 3" class="rounded-lg shadow-md w-full h-full object-cover">
+          </div>
+          <div class="carousel-item">
+            <img src="img/gallery4.jpg" alt="Gallery Image 4" class="rounded-lg shadow-md w-full h-full object-cover">
+          </div>
+          <div class="carousel-nav">
+            <button class="prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="next"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact bg-green-100 py-16" id="contact">
+      <div class="container mx-auto">
+        <div class="section-header text-center mb-12 animate-fade-in">
+          <h2 class="text-3xl font-bold mb-2">Get in Touch</h2>
+          <p class="text-lg">Let's bring your garden dreams to life</p>
+        </div>
+        <form class="max-w-2xl mx-auto animate-fade-in">
+          <div class="mb-4">
+            <input type="text" placeholder="Name" class="w-full p-2 border border-gray-300 rounded-md" required>
+          </div>
+          <div class="mb-4">
+            <input type="email" placeholder="Email" class="w-full p-2 border border-gray-300 rounded-md" required>
+          </div>
+          <div class="mb-4">
+            <textarea placeholder="Message" rows="5" class="w-full p-2 border border-gray-300 rounded-md"
+              required></textarea>
+          </div>
+          <button type="submit"
+            class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md transition-all duration-300">Submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-green-900 text-white py-8">
+    <div class="container mx-auto">
+      <div class="footer-content flex flex-col md:flex-row justify-between items-center">
+        <div class="footer-logo mb-4 md:mb-0">
+          <a href="#" class="text-2xl font-bold">Lucky Shrub</a>
+        </div>
+      </div>
+      <div class="footer-bottom text-center mt-8">
+        <p>&copy; 2023 Lucky Shrub. All rights reserved.</p>
       </div>
     </div>
-  </div>
+  </footer>
 
+  <script>
+    // Add smooth scrolling to anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Carousel functionality
+    const carousel = document.querySelector('.carousel');
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    const prevButton = document.querySelector('.carousel-nav .prev');
+    const nextButton = document.querySelector('.carousel-nav .next');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      carouselItems.forEach(item => item.classList.remove('active'));
+      carouselItems[index].classList.add('active');
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+      showSlide(currentIndex);
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % carouselItems.length;
+      showSlide(currentIndex);
+    }
+
+    prevButton.addEventListener('click', prevSlide);
+    nextButton.addEventListener('click', nextSlide);
+
+    // Auto-cycle through slides
+    setInterval(nextSlide, 5000);
+  </script>
 </body>
 
 </html>
