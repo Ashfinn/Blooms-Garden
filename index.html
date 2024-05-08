@@ -12,101 +12,8 @@
     href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
     rel="stylesheet">
   <script src="https://kit.fontawesome.com/11a2fb163c.js" crossorigin="anonymous"></script>
-  <style>
-    .animate-fade-in {
-      opacity: 0;
-      animation: fadeIn 1s ease-in-out forwards;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-
-    /* Add new styles */
-    .carousel {
-      position: relative;
-      width: 100%;
-      height: 400px;
-      overflow: hidden;
-    }
-
-    .carousel-item {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: opacity 0.5s ease-in-out;
-    }
-
-    .carousel-item.active {
-      opacity: 1;
-    }
-
-    .carousel-nav {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      z-index: 1;
-    }
-
-    .carousel-nav button {
-      background-color: rgba(255, 255, 255, 0.5);
-      border: none;
-      padding: 10px 20px;
-      font-size: 24px;
-      cursor: pointer;
-      transition: background-color 0.3s ease-in-out;
-    }
-
-    .carousel-nav button:hover {
-      background-color: rgba(255, 255, 255, 0.8);
-    }
-
-    .animate-slide-in {
-      animation: slideIn 1s ease-in-out forwards;
-    }
-
-    @keyframes slideIn {
-      from {
-        transform: translateX(-100%);
-      }
-
-      to {
-        transform: translateX(0);
-      }
-    }
-
-    .animate-slide-out {
-      animation: slideOut 1s ease-in-out forwards;
-    }
-
-    @keyframes slideOut {
-      from {
-        transform: translateX(0);
-      }
-
-      to {
-        transform: translateX(100%);
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+  
 </head>
 
 <body class="font-sans">
@@ -116,7 +23,7 @@
         <a href="#" class="text-2xl font-bold">Lucky Shrub</a>
       </div>
       <ul class="hidden md:flex space-x-6 animate-slide-in">
-        <li><a href="#" class="hover:text-green-300">Home</a></li>
+        <li><a href="#home" class="hover:text-green-300">Home</a></li>
         <li><a href="#about" class="hover:text-green-300">About</a></li>
         <li><a href="#services" class="hover:text-green-300">Services</a></li>
         <li><a href="#gallery" class="hover:text-green-300">Gallery</a></li>
@@ -144,7 +51,7 @@
   </div>
 
   <main>
-    <section class="hero bg-green-900 text-white py-32">
+    <section class="hero bg-green-900 text-white py-32" id="home">
       <div class="hero-content container mx-auto text-center animate-fade-in">
         <h1 class="text-5xl font-bold mb-4">Welcome to Lucky Shrub</h1>
         <p class="text-xl mb-8">Turn your outdoor space into a green oasis</p>
@@ -161,7 +68,7 @@
           <p class="text-lg">Bringing nature's beauty to your doorstep</p>
         </div>
         <div class="about-content flex flex-col md:flex-row animate-fade-in">
-          <div class="about-text md:w-1/2 mb-8 md:mb-0">
+          <div class="about-text md:w-1/2 mb-8 md:mb-0 pr-4">
             <p class="mb-4">Based in beautiful Tucson, Arizona, our small but dedicated team specializes in garden
               design, maintenance, and plant sales. We believe that a well-designed garden can bring beauty and
               tranquility to your life, and we're here to make that a reality.</p>
@@ -173,9 +80,8 @@
             <div class="about-founders flex flex-col md:flex-row">
               <div class="founder md:w-1/2 mb-4 md:mb-0 md:mr-4">
                 <img src="img/ashfin.jpg" alt="Ashfin, Founder" class="rounded-lg shadow-md mb-2 w-full h-auto">
-                <h3 class="text-xl font-bold mb-2 w-full h-auto">
-                  <h3 class="text-xl font-bold mb-1">Ashfin</h3>
-                  <p class="text-sm">Founder, Garden Designer</p>
+                <h3 class="text-xl font-bold mb-2">Ashfin</h3>
+                <p class="text-sm">Founder, Garden Designer</p>
               </div>
               <div class="founder md:w-1/2">
                 <img src="img/madoka.jpg" alt="Madoka, Founder" class="rounded-lg shadow-md mb-2 w-full h-auto">
@@ -184,7 +90,7 @@
               </div>
             </div>
           </div>
-          <div class="about-image md:w-1/2">
+          <div class="about-image md:w-1/2 mt-8 md:mt-0">
             <img src="img/about.jpg" alt="About Lucky Shrub" class="rounded-lg shadow-md w-full h-auto">
           </div>
         </div>
@@ -229,13 +135,16 @@
             <img src="img/gallery1.jpg" alt="Gallery Image 1" class="rounded-lg shadow-md w-full h-full object-cover">
           </div>
           <div class="carousel-item">
-            <img src="img/gallery2.jpg" alt="Gallery Image 2" class="rounded-lg shadow-md w-full h-full object-cover">
+            <img src="https://via.placeholder.com/1200x500" alt="Placeholder Image"
+              class="rounded-lg shadow-md w-full h-full object-cover">
           </div>
           <div class="carousel-item">
-            <img src="img/gallery3.jpg" alt="Gallery Image 3" class="rounded-lg shadow-md w-full h-full object-cover">
+            <img src="https://via.placeholder.com/1200x500" alt="Placeholder Image"
+              class="rounded-lg shadow-md w-full h-full object-cover">
           </div>
           <div class="carousel-item">
-            <img src="img/gallery4.jpg" alt="Gallery Image 4" class="rounded-lg shadow-md w-full h-full object-cover">
+            <img src="https://via.placeholder.com/1200x500" alt="Placeholder Image"
+              class="rounded-lg shadow-md w-full h-full object-cover">
           </div>
           <div class="carousel-nav">
             <button class="prev"><i class="fas fa-chevron-left"></i></button>
@@ -261,6 +170,14 @@
           <div class="mb-4">
             <textarea placeholder="Message" rows="5" class="w-full p-2 border border-gray-300 rounded-md"
               required></textarea>
+          </div>
+          <div class="mb-4">
+            <select class="w-full p-2 border border-gray-300 rounded-md" required>
+              <option value="">Select a service</option>
+              <option value="garden-design">Garden Design</option>
+              <option value="maintenance">Garden Maintenance</option>
+              <option value="plant-sales">Plant Sales</option>
+            </select>
           </div>
           <button type="submit"
             class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md transition-all duration-300">Submit</button>
