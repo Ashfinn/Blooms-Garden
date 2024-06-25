@@ -9,18 +9,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
-  <script src="https://kit.fontawesome.com/11a2fb163c.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="font-sans">
+<body class="font-sans bg-gray-50">
   <header class="bg-green-900 text-white fixed w-full z-50 shadow-lg">
     <nav class="container mx-auto flex items-center justify-between py-4 px-6">
       <div class="logo">
-        <a href="#" class="text-2xl font-bold flex item-center">Lucky Shrub</a>
+        <a href="#" class="text-2xl font-bold">Lucky Shrub</a>
       </div>
       <ul class="hidden md:flex space-x-6">
         <li><a href="#home" class="hover:text-green-300">Home</a></li>
@@ -38,7 +38,7 @@
   <div class="fixed bottom-4 right-4 z-40">
     <div class="bg-green-800 rounded-full p-2 mb-2">
       <a href="https://linktr.ee/Ashfinn" target="_blank" class="text-white hover:text-green-300"><i
-          class="fa-solid fa-link"></i></a>
+          class="fas fa-link"></i></a>
     </div>
     <div class="bg-green-800 rounded-full p-2 mb-2">
       <a href="https://github.com/Ashfinn" target="_blank" class="text-white hover:text-green-300"><i
@@ -51,8 +51,8 @@
   </div>
 
   <main>
-    <section class="hero bg-green-900 text-black py-40 bg-cover bg-center" id="home"
-      style="background-image: url('img/hero-bg.jpg');">
+    <section class="hero bg-green-900 text-white py-40 bg-cover bg-center" id="home"
+      style="background-image: url('../img/hero-bg.jpg');">
       <div class="hero-content container mx-auto text-center" data-aos="fade-in">
         <h1 class="text-5xl font-bold mb-4">Welcome to Lucky Shrub</h1>
         <p class="text-xl mb-8">Turn your outdoor space into a green oasis</p>
@@ -62,113 +62,110 @@
       </div>
     </section>
 
-    <section class="about py-16 bg-floral-white" id="about">
+    <section class="about py-16 bg-white" id="about">
       <div class="container mx-auto">
         <div class="section-header text-center mb-12" data-aos="fade-up">
-          <h2 class="text-3xl font-bold mb-2 text-forest-green">About Us</h2>
-          <p class="text-lg text-earth-brown">Bringing nature's beauty to your doorstep</p>
+          <h2 class="text-3xl font-bold mb-2 text-green-900">About Us</h2>
+          <p class="text-lg text-gray-700">Bringing nature's beauty to your doorstep</p>
         </div>
         <div class="about-content flex flex-col md:flex-row" data-aos="fade-up">
           <div class="about-text md:w-1/2 mb-8 md:mb-0 pr-4">
-            <p class="mb-4 text-earth-brown">Based in beautiful Tucson, Arizona, our small but dedicated team
-              specializes
-              in garden
-              design, maintenance, and plant sales. We believe that a well-designed garden can bring beauty and
-              tranquility to your life, and we're here to make that a reality.</p>
-            <p class="mb-4 text-earth-brown">Whether you're looking for a stunning garden makeover, need regular
-              maintenance, or want to
-              bring the outdoors in with our handpicked selection of plants, Lucky Shrub has you covered. Our founder,
-              Jason, is a garden design maestro, and Maria takes care of our thriving plant nursery. Together, they've
-              cultivated a business rooted in their love for plants and a desire to make your outdoor space flourish.
-            </p>
+            <p class="mb-4 text-gray-700">Based in beautiful Tucson, Arizona, our small but dedicated team specializes
+              in garden design, maintenance, and plant sales. We believe that a well-designed garden can bring beauty
+              and tranquility to your life, and we're here to make that a reality.</p>
+            <p class="mb-4 text-gray-700">Whether you're looking for a stunning garden makeover, need regular
+              maintenance, or want to bring the outdoors in with our handpicked selection of plants, Lucky Shrub has you
+              covered. Our founder, Jason, is a garden design maestro, and Maria takes care of our thriving plant
+              nursery. Together, they've cultivated a business rooted in their love for plants and a desire to make your
+              outdoor space flourish.</p>
             <div class="about-founders flex flex-col md:flex-row">
               <div class="founder md:w-1/2 mb-4 md:mb-0 md:mr-4">
                 <a href="https://ashfinn.github.io/">
-                  <img src="img/ashfin.jpg" alt="Ashfin, Founder" class="rounded-lg shadow-md mb-2 w-full h-auto">
+                  <img src="../img/ashfin.jpg" alt="Ashfin, Founder" class="rounded-lg shadow-md mb-2 w-full h-auto">
                 </a>
                 <h3 class="text-xl font-bold mb-2">Ashfin</h3>
-                <p class="text-sm">Founder, Garden Designer</p>
+                <p class="text-sm text-gray-600">Founder, Garden Designer</p>
               </div>
               <div class="founder md:w-1/2">
-                <img src="img/madoka.jpg" alt="Madoka, Founder" class="rounded-lg shadow-md mb-2 w-full h-auto">
+                <img src="../img/madoka.jpg" alt="Madoka, Founder" class="rounded-lg shadow-md mb-2 w-full h-auto">
                 <h3 class="text-xl font-bold mb-1">Madoka</h3>
-                <p class="text-sm">Founder, Plant Nursery Manager</p>
+                <p class="text-sm text-gray-600">Founder, Plant Nursery Manager</p>
               </div>
             </div>
           </div>
           <div class="about-image md:w-1/2 mt-8 md:mt-0">
-            <img src="img/about.jpg" alt="About Lucky Shrub" class="rounded-lg shadow-md w-full h-auto">
+            <img src="../img/about.jpg" alt="About Lucky Shrub" class="rounded-lg shadow-md w-full h-auto">
           </div>
         </div>
       </div>
     </section>
 
-    <section class="testimonials py-16 bg-green-100" id="testimonials">
+    <section class="testimonials py-16 bg-gray-100" id="testimonials">
       <div class="container mx-auto">
         <div class="section-header text-center mb-12" data-aos="fade-up">
-          <h2 class="text-3xl font-bold mb-2 text-forest-green">Testimonials</h2>
-          <p class="text-lg text-earth-brown">What our clients say</p>
+          <h2 class="text-3xl font-bold mb-2 text-green-900">Testimonials</h2>
+          <p class="text-lg text-gray-700">What our clients say</p>
         </div>
         <div class="testimonials-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up">
           <div
             class="testimonial-card bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
-            <p class="text-earth-brown mb-4">"Lucky Shrub transformed our backyard into a beautiful oasis. We couldn't
-              be happier!"</p>
-            <h3 class="text-xl font-bold mb-2 text-forest-green">Jane Doe</h3>
-            <p class="text-sm text-earth-brown">Homeowner</p>
+            <p class="text-gray-700 mb-4">"Lucky Shrub transformed our backyard into a beautiful oasis. We couldn't be
+              happier!"</p>
+            <h3 class="text-xl font-bold mb-2 text-green-900">Jane Doe</h3>
+            <p class="text-sm text-gray-600">Homeowner</p>
           </div>
           <div
             class="testimonial-card bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
-            <p class="text-earth-brown mb-4">"The team at Lucky Shrub is incredibly professional and talented. Highly
+            <p class="text-gray-700 mb-4">"The team at Lucky Shrub is incredibly professional and talented. Highly
               recommend!"</p>
-            <h3 class="text-xl font-bold mb-2 text-forest-green">John Smith</h3>
-            <p class="text-sm text-earth-brown">Business Owner</p>
+            <h3 class="text-xl font-bold mb-2 text-green-900">John Smith</h3>
+            <p class="text-sm text-gray-600">Business Owner</p>
           </div>
           <div
             class="testimonial-card bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
-            <p class="text-earth-brown mb-4">"We love our new garden! Thank you, Lucky Shrub, for your excellent
-              service."</p>
-            <h3 class="text-xl font-bold mb-2 text-forest-green">Sarah Lee</h3>
-            <p class="text-sm text-earth-brown">Gardening Enthusiast</p>
+            <p class="text-gray-700 mb-4">"We love our new garden! Thank you, Lucky Shrub, for your excellent service."
+            </p>
+            <h3 class="text-xl font-bold mb-2 text-green-900">Sarah Lee</h3>
+            <p class="text-sm text-gray-600">Gardening Enthusiast</p>
           </div>
         </div>
       </div>
     </section>
 
-    <br>
-
-    <section class="services bg-green-100 py-16" id="services">
+    <section class="services bg-white py-16" id="services">
       <div class="container mx-auto">
         <div class="section-header text-center mb-12" data-aos="fade-up">
-          <h2 class="text-3xl font-bold mb-2">Our Services</h2>
-          <p class="text-lg">Transforming your outdoor spaces</p>
+          <h2 class="text-3xl font-bold mb-2 text-green-900">Our Services</h2>
+          <p class="text-lg text-gray-700">Transforming your outdoor spaces</p>
         </div>
         <div class="services-grid grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up">
           <div class="service-card bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
             <i class="fas fa-pencil-ruler text-green-600 text-4xl mb-4"></i>
-            <h3 class="text-xl font-bold mb-2">Garden Design</h3>
-            <p>Our skilled designers create custom garden plans tailored to your unique space and vision.</p>
+            <h3 class="text-xl font-bold mb-2 text-green-900">Garden Design</h3>
+            <p class="text-gray-700">Our skilled designers create custom garden plans tailored to your unique space and
+              vision.</p>
           </div>
           <div class="service-card bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
             <i class="fas fa-tools text-green-600 text-4xl mb-4"></i>
-            <h3 class="text-xl font-bold mb-2">Garden Maintenance</h3>
-            <p>Let our experienced team handle the upkeep, ensuring your garden remains lush and vibrant.</p>
+            <h3 class="text-xl font-bold mb-2 text-green-900">Garden Maintenance</h3>
+            <p class="text-gray-700">Let our experienced team handle the upkeep, ensuring your garden remains lush and
+              vibrant.</p>
           </div>
           <div class="service-card bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
             <i class="fas fa-seedling text-green-600 text-4xl mb-4"></i>
-            <h3 class="text-xl font-bold mb-2">Plant Sales</h3>
-            <p>Explore our nursery and choose from a diverse selection of indoor and outdoor plants for your home or
-              garden.</p>
+            <h3 class="text-xl font-bold mb-2 text-green-900">Plant Sales</h3>
+            <p class="text-gray-700">Explore our nursery and choose from a diverse selection of indoor and outdoor
+              plants for your home or garden.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="gallery py-16" id="gallery">
+    <section class="gallery py-16 bg-gray-100" id="gallery">
       <div class="container mx-auto">
         <div class="section-header text-center mb-12" data-aos="fade-up">
-          <h2 class="text-3xl font-bold mb-2">Gallery</h2>
-          <p class="text-lg">Discover our stunning garden designs</p>
+          <h2 class="text-3xl font-bold mb-2 text-green-900">Gallery</h2>
+          <p class="text-lg text-gray-700">Discover our stunning garden designs</p>
         </div>
         <div class="gallery-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up">
           <div class="gallery-item">
@@ -205,11 +202,11 @@
       </div>
     </section>
 
-    <section class="contact bg-green-100 py-16" id="contact">
+    <section class="contact bg-white py-16" id="contact">
       <div class="container mx-auto">
         <div class="section-header text-center mb-12" data-aos="fade-up">
-          <h2 class="text-3xl font-bold mb-2">Get in Touch</h2>
-          <p class="text-lg">Let's bring your garden dreams to life</p>
+          <h2 class="text-3xl font-bold mb-2 text-green-900">Get in Touch</h2>
+          <p class="text-lg text-gray-700">Let's bring your garden dreams to life</p>
         </div>
         <form class="max-w-2xl mx-auto" data-aos="fade-up">
           <div class="mb-4">
