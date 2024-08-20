@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const FeaturedProducts = () => {
   const products = [
@@ -13,7 +14,9 @@ const FeaturedProducts = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
         {products.map((product) => (
           <div key={product.id} className="card bg-base-100 shadow-xl">
-            <figure><img src={product.image} alt={product.name} /></figure>
+            <figure className="relative w-full h-80"> {/* Adjust the height as needed */}
+              <Image src={product.image} alt={product.name} fill className='object-cover' />
+            </figure>
             <div className="card-body">
               <h2 className="card-title">{product.name}</h2>
               <p>{product.price}</p>

@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <div className="navbar bg-base-100 shadow-lg px-5 animate-fadeIn">
       <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl">Bloom's Garden</a>
+        <a className="btn btn-ghost normal-case text-xl">Bloom&apos;s Garden</a>
       </div>
       <div className="flex-none">
         <div className="dropdown dropdown-end">
